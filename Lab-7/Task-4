@@ -1,0 +1,37 @@
+
+try:
+
+    # Write
+    with open("sample.txt", "w") as file:
+        file.write("Hello Python\n")
+        file.write("This is Lab 07.\n")
+
+    print("File written successfully.")
+
+    # Append
+    with open("sample.txt", "a") as file:
+        file.write("This line is appended.\n")
+
+    print("Content appended successfully.")
+
+    # Read
+    with open("sample.txt", "r") as file:
+        data = file.read()
+
+    print("\nFile Content:")
+    print(data)
+
+    # Create
+    with open("new_file.txt", "x") as file:
+        file.write("New file created successfully.")
+
+    print("New file created successfully.")
+
+except FileExistsError:
+    print("Error: File already exists.")
+
+except FileNotFoundError:
+    print("Error: File not found.")
+
+except Exception as e:
+    print("Unexpected error:", e)
