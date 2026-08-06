@@ -30,7 +30,7 @@ account = BankAccount(
     "Jannat"
 )
 
-# Calling methods
+# method calling
 account.check_balance()
 
 account.deposit(2000)
